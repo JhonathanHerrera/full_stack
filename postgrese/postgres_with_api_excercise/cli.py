@@ -22,10 +22,12 @@ while True:
         site = input("Site name: ")
         username = input("Username: ")
         password = input("Password: ")
+        email = input("Email: ")
         res = requests.post(f"{BASE_URL}/add", json={
             "site": site,
             "username": username,
-            "password": password
+            "password": password,
+            "email" : email
         })
         
         print(res.json())
